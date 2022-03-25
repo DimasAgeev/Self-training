@@ -228,27 +228,103 @@
 //   console.log(userInfo[key]); //Выводит значение свойства
 // }
 
-let userInfo = {
-  name: "Вася",
-  age: 30,
-  address: {
-    city: "Uzhhorod",
-  },
-};
-for (let key in userInfo.address) {
-  console.log(userInfo.address[key]);
+// let userInfo = {
+//   name: "Вася",
+//   age: 30,
+//   address: {
+//     city: "Uzhhorod",
+//   },
+// };
+// for (let key in userInfo.address) {
+//   console.log(userInfo.address[key]);
+// }
+// // Задача №8
+// /*
+// 1.Создайте пустой объект userInfo.
+// 2.Добавьте свойство name со значением Вася.
+// 3.Добавьте свойство age со значением 30.
+// 4.Измените значение свойства name на Лена.
+// 5.Удалите свойство name из объекта.
+// */
+// let personalData = {};
+// personalData.name = "Dima";
+// personalData.age = 30;
+// personalData.name = "Лена";
+// delete personalData.name;
+// console.log(personalData);
+
+// const userInfo = {
+//   alex: 500,
+//   dima: 300,
+//   sash: 200,
+// };
+// function money(userInfo) {
+//   let sum = 0;
+//   let i = 0;
+//   for (let key in userInfo) {
+//     i++, (sum += userInfo[key]);
+//   }
+//   return `Общая сумма ${sum}! Средняя зп ${sum / i}`;
+// }
+
+// console.log(money(userInfo));
+
+// const userInfo = {
+//   alex: {
+//     money: 350,
+//     sex: "m",
+//   },
+//   dima: {
+//     money: 350,
+//     sex: "m",
+//   },
+//   sash: {
+//     money: 350,
+//     sex: "f",
+//   },
+// };
+// function money(userInfo) {
+//   let sum = 0;
+//   let i = 0;
+//   for (let key in userInfo) {
+//     i++, (sum += userInfo[key].money);
+//   }
+//   return `Общая сумма ${sum}! Средняя зп ${sum / i}`;
+// }
+
+// console.log(money(userInfo));
+
+// function isEvenValue(obj) {
+//   for (const key in obj) {
+//     if (obj[key] % 2 === 0) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// console.log(isEvenValue({ x: 1, y: 2 }));
+
+// const testObj = { x: 1, y: 2, z: 3 };
+// console.log(testObj);
+// function objRevers(obj) {
+//   const newObj = {};
+//   for (const key in obj) {
+//     let newKey = obj[key];
+//     newObj[newKey] = key;
+//   }
+//   return newObj;
+// }
+// console.log(objRevers(testObj));
+
+function numberString(number) {
+  let rez = "";
+  for (i = 0; i < number.length; i++)
+    if (number[i] % 2 !== 0 && number[i + 1] % 2 !== 0) {
+      rez += number[i] + ":";
+    } else {
+      rez += number[i];
+    }
+  number += number[number.length - 1];
+  return rez;
 }
-// Задача №8
-/*
-1.Создайте пустой объект userInfo.
-2.Добавьте свойство name со значением Вася.
-3.Добавьте свойство age со значением 30.
-4.Измените значение свойства name на Лена.
-5.Удалите свойство name из объекта.
-*/
-let personalData = {};
-personalData.name = "Dima";
-personalData.age = 30;
-personalData.name = "Лена";
-delete personalData.name;
-console.log(personalData);
+console.log(numberString("2411111567883339434342"));
