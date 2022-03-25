@@ -238,3 +238,17 @@ let userInfo = {
 for (let key in userInfo.address) {
   console.log(userInfo.address[key]);
 }
+// Задача №8
+/*
+1.Создайте пустой объект userInfo.
+2.Добавьте свойство name со значением Вася.
+3.Добавьте свойство age со значением 30.
+4.Измените значение свойства name на Лена.
+5.Удалите свойство name из объекта.
+*/
+let personalData = {};
+personalData.name = "Dima";
+personalData.age = 30;
+personalData.name = "Лена";
+delete personalData.name;
+console.log(personalData);
