@@ -316,15 +316,50 @@
 // }
 // console.log(objRevers(testObj));
 
-function numberString(number) {
-  let rez = "";
-  for (i = 0; i < number.length; i++)
-    if (number[i] % 2 !== 0 && number[i + 1] % 2 !== 0) {
-      rez += number[i] + ":";
-    } else {
-      rez += number[i];
-    }
-  number += number[number.length - 1];
-  return rez;
+// function numberString(number) {
+//   let rez = "";
+//   for (i = 0; i < number.length; i++)
+//     if (number[i] % 2 !== 0 && number[i + 1] % 2 !== 0) {
+//       rez += number[i] + ":";
+//     } else {
+//       rez += number[i];
+//     }
+//   number += number[number.length - 1];
+//   return rez;
+// }
+// console.log(numberString("2411111567883339434342"));
+
+// Массивы
+// let testArray = [1, 2, 3, 4];
+// function arrSwith(arr) {
+//   let first = arr[0];
+//   let last = arr[arr.length - 1];
+//   arr[0] = last;
+//   arr[arr.length - 1] = first;
+//   return arr;
+// }
+// console.log(arrSwith(testArray));
+
+function random(min, max) {
+  return Math.round(min + Math.random() * (max - min));
 }
-console.log(numberString("2411111567883339434342"));
+
+function randomArray(min, max, size) {
+  let array = [];
+  for (let i = 0; i < size; i++) {
+    array.push(random(min, max));
+  }
+  return array;
+}
+// console.log(randomArray(10, 20, 10));
+
+let arrayForTask2 = randomArray(50, 0, 10);
+console.log(arrayForTask2);
+function minMaxinArray(array) {
+  let max = array[0];
+  for (let el of array) {
+    el >= max ? (max = el) : null;
+  }
+  return max;
+}
+console.log(minMaxinArray(arrayForTask2));
